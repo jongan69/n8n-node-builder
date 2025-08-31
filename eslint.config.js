@@ -1,9 +1,5 @@
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-import { FlatCompat } from '@eslint/eslintrc';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const { dirname } = require('path');
+const { FlatCompat } = require('@eslint/eslintrc');
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
@@ -11,7 +7,7 @@ const compat = new FlatCompat({
   allConfig: { js: { ignorePatterns: ['node_modules/**'] } },
 });
 
-export default [
+module.exports = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
