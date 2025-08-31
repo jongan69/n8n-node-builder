@@ -1,16 +1,33 @@
-const { dirname } = require('path');
-const { FlatCompat } = require('@eslint/eslintrc');
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: { js: { ignorePatterns: ['node_modules/**'] } },
-  allConfig: { js: { ignorePatterns: ['node_modules/**'] } },
-});
-
 module.exports = [
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  {
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'coverage/**',
+    ],
+  },
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      sourceType: 'module',
+      parser: require('@typescript-eslint/parser'),
+      parserOptions: {
+        ecmaVersion: 2020,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    plugins: {
+      '@typescript-eslint': require('@typescript-eslint/eslint-plugin'),
+      react: require('eslint-plugin-react'),
+      'react-hooks': require('eslint-plugin-react-hooks'),
+    },
     rules: {
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
@@ -22,15 +39,5 @@ module.exports = [
       '@typescript-eslint/no-var-requires': 'off',
       '@typescript-eslint/triple-slash-reference': 'off',
     },
-  },
-  {
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-      'coverage/**',
-    ],
   },
 ];
