@@ -21,22 +21,26 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v1
+      with:
+        bun-version: latest
 
     - name: Install dependencies
-      run: npm ci
+      run: bun install
 
     - name: Run linting
-      run: npm run lint
+      run: bun run lint
 
     - name: Run type checking
-      run: npm run type-check
+      run: bun run type-check
 
     - name: Run tests
       run: echo "Tests not configured for production build"
 
     - name: Build application
-      run: npm run build
+      run: bun run build
 
   docker:
     runs-on: ubuntu-latest
