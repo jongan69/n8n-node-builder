@@ -298,4 +298,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Built with [n8n](https://n8n.io) - The workflow automation platform
 - UI components from [shadcn/ui](https://ui.shadcn.com)
 - Icons from [Lucide](https://lucide.dev)
-# n8n-node-builder
