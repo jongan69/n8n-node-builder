@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+
 import { Sidebar } from '@/components/Sidebar';
 import { NodeDetailsStep } from '@/components/steps/NodeDetailsStep';
 import { ResourcesStep } from '@/components/steps/ResourcesStep';

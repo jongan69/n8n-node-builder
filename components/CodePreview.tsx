@@ -8,7 +8,7 @@ import { Download, Copy, Check } from 'lucide-react';
 import { NodeConfig } from '@/types';
 import { generateNodeFile, generateCredentialsFile, generateNodeJson, generatePackageJson } from '@/lib/codeGeneration';
 import { exportNodeAsZip } from '@/lib/zipExport';
-import { cn } from '@/lib/utils';
+
 
 interface CodePreviewProps {
   config: NodeConfig;

@@ -9,7 +9,6 @@ import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Resource } from '@/types';
 import { Link, Plus, Edit, Trash2, ArrowRight, ArrowLeft } from 'lucide-react';
-import { cn } from '@/lib/utils';
 
 interface ResourcesStepProps {
   resources: Resource[];

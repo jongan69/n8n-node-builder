@@ -12,7 +12,6 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Badge } from '@/components/ui/badge';
 import { Plus, Trash2, Settings, ArrowLeft, ArrowRight } from 'lucide-react';
 import { NodeField } from '@/types';
-import { cn } from '@/lib/utils';
 
 interface AdditionalFieldsStepProps {
   fields: NodeField[];

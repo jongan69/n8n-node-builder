@@ -1,4 +1,4 @@
-import { NodeConfig, NodeField, Operation, Resource } from '@/types';
+import { NodeConfig, Operation } from '@/types';
 
 export function generateNodeFile(config: NodeConfig): string {
   const { name, displayName, description, version, resources } = config;
@@ -215,7 +215,7 @@ export function generateNodeJson(config: NodeConfig): string {
 }
 
 export function generatePackageJson(config: NodeConfig): string {
-  const { name, displayName, description, version, metadata } = config;
+  const { name, description, version, metadata } = config;
   
   return JSON.stringify({
     name: `n8n-nodes-${name.toLowerCase()}`,

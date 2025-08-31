@@ -11,7 +11,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Badge } from '@/components/ui/badge';
 import { Resource, Operation, NodeField } from '@/types';
 import { Settings, Plus, Edit, Trash2, ArrowRight, ArrowLeft } from 'lucide-react';
-import { cn } from '@/lib/utils';
 
 interface OperationsStepProps {
   resources: Resource[];
@@ -28,7 +27,6 @@ export function OperationsStep({
   onAddOperation,
   onUpdateOperation,
   onDeleteOperation,
-  onAddField,
   onNext,
   onPrev,
 }: OperationsStepProps) {

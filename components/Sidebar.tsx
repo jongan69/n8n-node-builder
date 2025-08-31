@@ -1,6 +1,6 @@
 'use client';
 
-import { CheckCircle2, Circle, ChevronRight } from 'lucide-react';
+import { CheckCircle2, ChevronRight } from 'lucide-react';
 import { WizardStep } from '@/types';
 import { cn } from '@/lib/utils';
 
